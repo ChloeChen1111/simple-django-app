@@ -18,6 +18,12 @@
 
 import re
 
+def save_notes_to_file(notes, filename):
+    with open(filename, 'w') as file:
+        for key, value in notes.items():
+            file.write(f"{key}: {value}\n")
+
+
 def place_element_symbol(element, symbol, user_input):
     return user_input.replace(element, symbol)
 
